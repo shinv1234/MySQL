@@ -157,8 +157,8 @@ HAVING SUM(D.QuotedPrice * D.QuantityOrdered) >
 )
 ORDER BY CategoryDescription, ProductName;
 
--- 위의 쿼리와 동일
-SELECT D.CategoryDescription, D.ProductName, 
+-- 위의 쿼리와 동일  
+SELECT D.CategoryDescription, D.ProductName,  
   SUM(D.QuotedPrice * D.QuantityOrdered) AS TotalSales, a.AverageOfCategory
 FROM CatProdData AS D INNER JOIN AveragePerCategory AS a
 ON D.CategoryID = A.CategoryID 
@@ -171,6 +171,8 @@ DROP VIEW IF EXISTS CatProdData;
 DROP VIEW IF EXISTS AveragePerCategory;
 DROP VIEW IF EXISTS TotalPerProductNumber;
 ```
+
+
 
 
 

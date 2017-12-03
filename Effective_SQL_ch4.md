@@ -152,11 +152,8 @@ AND C.CustomerID IN
 ```SQL
 USE SalesOrdersSample;
 
--- View 삭제
-/*    
 DROP VIEW IF EXISTS CustomerProducts;
 DROP VIEW IF EXISTS ProdsOfInterest;
-*/
 
 -- CustomerProducts(고객-제품 통합 뷰)
 CREATE VIEW CustomerProducts AS
@@ -209,6 +206,9 @@ LEFT JOIN ProdsOfInterest PofI
 GROUP BY CP.CustomerID, CP.CustFirstName, CP.CustLastName
 HAVING COUNT(CP.ProductCategory) =
   (SELECT COUNT(ProductCategory) FROM ProdsOfInterest);
+  
+DROP VIEW IF EXISTS CustomerProducts;
+DROP VIEW IF EXISTS ProdsOfInterest;
 ```
 
 ### BW29. LEFT JOIN과 IS NULL을 이용한 차집합 연산

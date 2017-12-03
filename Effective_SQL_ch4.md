@@ -1,6 +1,6 @@
-# MySQL Tips
+# Effective SQL Ch4
 
-#### BW24. CASE를 이용하여 A 제품은 구매, B 제품은 미구매 고객 찾기
+### BW24. CASE를 이용하여 A 제품은 구매, B 제품은 미구매 고객 찾기
 
 ```SQL
 USE SalesOrdersSample;
@@ -27,7 +27,7 @@ WHERE (1 =
   ELSE 1 END));
 ```
 
-#### BW25. 다중조건의 처리
+### BW25. 다중조건의 처리
 
 **INNER JOIN**을 이용하여 다중조건 처리
 ```SQL
@@ -147,7 +147,7 @@ AND C.CustomerID IN
 
 
 
-#### BW26. GROUP BY, HAVING을 이용하여 관심제품 구매고객 목록 추출
+### BW26. GROUP BY, HAVING을 이용하여 관심제품 구매고객 목록 추출
 
 ```SQL
 USE SalesOrdersSample;
@@ -211,7 +211,7 @@ HAVING COUNT(CP.ProductCategory) =
   (SELECT COUNT(ProductCategory) FROM ProdsOfInterest);
 ```
 
-#### BW29. LEFT JOIN과 IS NULL을 이용한 차집합 연산
+### BW29. LEFT JOIN과 IS NULL을 이용한 차집합 연산
 JOIN 후 특정 기간 구매자만 추출
 ```SQL
 USE SalesOrdersSample;

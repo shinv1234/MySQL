@@ -1,0 +1,2 @@
+# Effective SQL Ch6
+
